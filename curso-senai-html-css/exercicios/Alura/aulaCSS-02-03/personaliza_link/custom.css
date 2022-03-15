@@ -1,0 +1,20 @@
+body{
+    background-color: #e8e8e8;
+    color:#0000ff;
+    font-size: 29px;
+}
+/*link não visitado*/
+a:link{
+    text-decoration: none;
+    color: #2d49a6;
+    
+}
+/*link visitado*/
+a:visited{
+    color: #e07c45;
+
+}
+/*mouse sobre o texto*/
+a:active{
+    color: #00f9b0;
+}

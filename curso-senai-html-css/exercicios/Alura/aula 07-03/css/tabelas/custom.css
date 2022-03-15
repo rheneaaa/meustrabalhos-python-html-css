@@ -1,0 +1,26 @@
+body{
+    background-color: #e8e8e8;
+    color: #0000ff;
+}
+table, th, td{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+th{
+    text-align: left;
+    color: #e8e8e8;
+    background-color: #264696;
+}
+.cargo{
+    text-align: center;
+}
+.conteudo{
+    text-align: right;
+}
+tr{
+    background-color: #000000;
+    color: #bfd689;
+}

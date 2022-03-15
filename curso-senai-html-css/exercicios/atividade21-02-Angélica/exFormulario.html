@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="">Nome:</label>
+            <input type="text" name="nome"><br>
+            <label for="">Endereço:</label>
+            <input type="text" name="endereço"><br>
+            <label for="">Cidade:</label>
+            <input type="text" name="cidade"><br>
+            <label for="">Estado:</label>
+            <select name="estados" id="">
+                <option value="" selected>Slecione</option>
+                <option value="sp">São Paulo</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ce">Ceará</option>
+            </select><br>
+        </fieldset>        
+    </form><br><br>
+    <form action="">
+        <fieldset>
+            <legend>Dados profissionais</legend><br>
+            <label for="">Natureza do cargo</label><br>
+            <input type="radio" name="turma" value="a" checked>Gerência
+            <input type="radio" name="turma" value="b">Financeiro
+            <input type="radio" name="turma" value="c">Recepção
+            <input type="radio" name="turma" value="d">Administrativo
+            <input type="radio" name="turma" value="d">Jurídico<br><br>
+            <label for="">Área de interesse</label><br>
+            <input type="checkbox" value="computação" name="computação">Computação
+            <input type="checkbox" value="biologia" name="biologia">Vermelho
+            <input type="checkbox" value="meio ambiente" name="meio ambiente">Meio Ambiente
+            <input type="checkbox" value="engenharia" name="engenharia">Engenharia
+            <input type="checkbox" value="história" name="história">História<br><br>
+            <label for="">Mini-currículo:</label>
+            <textarea name="mensagem" id="" cols="30" rows="10" placeholder="conteudo da mensagem"></textarea><br><br>
+        </fieldset><br><br>
+            <input type="submit" value="Enviar">
+            <button type="submit" value="Limpar" onclick="alert('Tem certeza?')">Limpar</button>
+              
+                
+    </form>
+    
+</body>
+</html>

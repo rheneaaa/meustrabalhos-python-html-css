@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTACIONAMENTO BRA PARK</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Calibri;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=button] {
+            background-color: #304064;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type=button]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="row" style="background-color:#000000;">
+            <div class="col-100"> <img style="border: 15px solid #000000;"
+                    src=""> </div>
+        </div>
+    </div>
+    <h1>Menu</h1>
+
+    <h2>Buscar Placa</h2>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <div class="container">
+        <form method="post" autocomplete="off" name="google-sheet">
+
+            <div class="row">
+                <div class="col-25"> <label for="placa">Buscar outra placa</label> </div>
+                <div class="col-60"> <input type="text" name="placa" class="form-control" placeholder="ABC4D89" value="" required=""/> </div>
+
+            <div class="row">
+                <div class="col-25"> <label for="finalizar">Finalizar.</label> </div>
+                <div class="col-60"> <input type="text" name="finalizar" class="form-control" onkeypress="$(this).mask('00:00:00')" placeholder="00:00:00" value="" required=""/> </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25"> <label for="cobrança">Cobrança.</label> </div>
+                <div class="col-60"> <input type="text" name="Telefone" class="form-control" onkeypress="$(this).mask('R$ ')" placeholder="R$" value="" required=""/> </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25"> <label for="vaga">Liberar vaga</label> </div>
+                <div class="col-60"> <input type="text" name="vaga" class="form-control" placeholder="10" value="" required=""/> </div>
+            </div>
+
+            <div class="row" style="display:none;">
+                <div class="col-25"> <label for="cep">Mensagem1</label> </div>
+                <div class="col-75"> <input type="text" name="Mensagem1" class="form-control" placeholder="" value="FALSO" required=""/> </div>
+            </div>
+
+            <div class="row" style="display:none;">
+                <div class="col-25"> <label for="cep">Mensagem2</label> </div>
+                <div class="col-75"> <input type="text" name="Mensagem2" class="form-control" placeholder="" value="FALSO" required=""/> </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25"> </div>
+                <div class="col-75">
+                    <div style="color: red;" id="orientacoes"></div>
+                </div>
+            </div>
+
+    <div class="row">
+        <div class="col-100"> <label for="grupo"></label> </div>
+    </div>
+    <div class="row"> <input type="submit" name="submit" class="btnSubmit btn-block" value="Sair" /> </div>
+    <p><a href="index.html" rel="prev">voltar</a></p>
+    </form>
+    </div><br>
+    </body>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyCMbtEdc3q6sooCck5bKJTXuxtrcDzQXrmYioKjwcgeSBTlSo/exec'
+    const form = document.forms['google-sheet']
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Busca feito com sucesso!"))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>

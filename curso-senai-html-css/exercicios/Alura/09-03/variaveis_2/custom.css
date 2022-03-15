@@ -1,0 +1,9 @@
+p{
+    text-align: center;
+    border: 2px solid #00f;
+    background: yellow;
+    color: green;
+    padding: 3px 10px;
+    display: inline;
+    cursor: pointer;
+}

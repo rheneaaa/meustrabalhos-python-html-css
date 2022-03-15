@@ -1,0 +1,25 @@
+body {
+    background-color: #e8e8e8;
+    color: #0000ff;
+}
+header{
+    background-color: #6800ff;
+    color: #fff;    
+    height: 80px;
+    padding: 40px 100px;
+}
+nav{
+    background-color: #ffd700;   
+    padding: 15px 16px 18px 14px;
+}
+article{
+    background-color: #008000;
+    color: #fff;
+    padding: 35px 18px;
+}
+footer{
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

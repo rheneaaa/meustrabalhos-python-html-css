@@ -1,0 +1,17 @@
+body{
+    background-color: #e8e8e8;
+    color: #0000ff;
+
+}
+.p2{
+    display: none;
+}
+.p4{
+    visibility: hidden;
+}
+.p6{
+    display: block;
+}
+li{
+    display: inline;
+}

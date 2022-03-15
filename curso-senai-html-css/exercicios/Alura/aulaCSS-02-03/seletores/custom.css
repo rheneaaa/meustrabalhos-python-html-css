@@ -1,0 +1,53 @@
+body{
+    background-color:#e8e8e8;
+    color: #00ff;    
+}
+/*seletor de tipo*/
+p{
+    font-size: 30px;
+    color: #f00;    
+}
+/*seletor de descendente*/
+p span{
+    color: #52a2aa;
+}
+/*seletor pseudo-classes*/
+a:hover{
+    color:black;
+    font-size: 50px;
+}
+/*seletor seletor ID(#)*/
+#cabecalho{
+    background-color: #f00;
+    width: 100%;
+    height: 250px;
+}
+#menu{
+    background-color: #00ff;
+    width: 100%;
+    height: 70%;
+    color: #e8e8e8;
+}
+/*seletor de classes*/
+.cont_destaque{
+    color: crimson;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.mais-novo p{
+    color: chocolate;
+    text-align: right;
+    font-size: 35px;
+}
+/*seletor universal*/
+*{
+    text-align: left;
+    color: green;
+    font-size: 27px;
+}
+/*seletor de agrupamento*/
+h2,h3{
+    color: black;
+    text-align: center;
+    font-size: 45px;
+}

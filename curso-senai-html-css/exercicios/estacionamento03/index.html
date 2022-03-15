@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title> Programa de Professores </title>
+  </head>
+  <body>
+    <h3> Programa de Professores  </h3>
+    <p>
+      <h4> Cadastro de Professores  </h4>
+      <form action="/cadastro" method="post">
+        Nome: <input type="text" value="Meu nome" name="nome"> <br>
+        Sobrenome: <input type="text" name="sobrenome"> <br>
+        <input type="submit" name="form" value="Enviar" />
+      </form> 
+    </p>
+    <br> 
+    <p>
+      Consulta de Professores
+      <form action="/consulta" method="post">
+        Nome: <input type="text" name="nome"> <br>
+        <input type="submit" name="form" value="Pesquisar" />
+      </form> 
+    </p>
+  </body>
+</html>
