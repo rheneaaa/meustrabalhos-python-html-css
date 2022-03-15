@@ -1,0 +1,14 @@
+alunos = open('alunos.txt', 'a')
+nome = 0
+while nome != '':
+    nome = input('Digite um nome: ')
+    alunos.write(nome)
+    alunos.write('\n')
+
+Alunos.closed()
+Rhene
+Mikio
+Yuuki
+
+Rhene
+
